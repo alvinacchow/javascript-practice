@@ -8,7 +8,15 @@
  * @example "racecar" -> true
 */
 function problem(str) {
-    return null;
+    let spaceless = str.replace(/\s+/g, '').toLowerCase();
+    let reversed = spaceless.split('').reverse().join('').toLowerCase();
+
+    for (let i = 0; i < spaceless.length; i ++) {
+        if (spaceless[i] !== reversed[i]) {
+            return false;
+        }
+    }
+    return true;
 }
 
 const tests = [
