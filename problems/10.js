@@ -7,7 +7,11 @@
  * @example "abcdef" -> "ABCdef"
 */
 function problem(str) {
-    return null;
+    let word = "";
+    for (var i = 0; i < Math.floor(str.length / 2); i ++) {
+        word += str.charAt(i).toUpperCase();
+    }
+    return word + str.slice(Math.floor(str.length/2)).toLowerCase();
 }
 
 const tests = [
